@@ -1,8 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+:root {
+  --dark: #1b1b1b;
+  --dark-100: #272727;
+  --dark-200: #343434;
+  --dark-300: #484848;
+  --grey: #afafaf;
+  --light-100: #d4d4d4;
+  --light: #ffffff;
+  --blue: #1d4092;
+  --blue-100: #3471ff;
+  --blue-100-transparent: hsla(222, 100%, 60%, 0.7);
+  --blue-200: #457bfa;
+  --red: #cb1919;
+  --yellow-100: #f9fc69;
+  --yellow: #d3d638;
+}
+
 .line {
   background-color: var(--dark-300);
   height: 1px;
   width: 100%;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-300);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark-100);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--dark-300);
+  border: 1px solid transparent;
 }
 
 .btn-favorite {
@@ -14,7 +52,7 @@
   margin-right: 3px;
 }
 .btn-favorite::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f005";
 }
@@ -28,10 +66,9 @@
   background-color: transparent;
   color: var(--yellow);
   margin-right: 3px;
-  outline: none;
 }
 .btn-favorite--active::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f005";
 }
@@ -57,7 +94,7 @@
   background-color: transparent;
 }
 .btn-menu::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f142";
 }
@@ -80,7 +117,7 @@
   align-items: center;
 }
 .btn-menu--active::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f142";
 }
@@ -106,7 +143,7 @@
   background-color: hsla(222deg, 100%, 60%, 0.176);
 }
 .btn-edit::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f303";
 }
@@ -132,27 +169,65 @@
   background-color: hsla(0deg, 78%, 45%, 0.168);
 }
 .btn-remove::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f2ed";
   color: var(--red);
 }
 
-:root {
-  --dark: #1b1b1b;
-  --dark-100: #272727;
-  --dark-200: #343434;
-  --dark-300: #484848;
-  --grey: #afafaf;
-  --light-100: #d4d4d4;
-  --light: #ffffff;
-  --blue: #1d4092;
-  --blue-100: #3471ff;
-  --blue-100-transparent: hsla(222, 100%, 60%, 0.7);
-  --blue-200: #457bfa;
-  --red: #cb1919;
-  --yellow-100: #f9fc69;
-  --yellow: #d3d638;
+.tree-area {
+  font-family: "Poppins";
+  padding: 20px 10px 0 20px;
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 70vh;
+}
+.tree-area li {
+  font-size: 0.95em;
+  font-weight: 400;
+  cursor: pointer;
+}
+.tree-area li:hover {
+  opacity: 0.8;
+}
+.tree-area li a {
+  color: var(--grey);
+  text-decoration: none;
+}
+.tree-area li a::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f249";
+  margin-right: 5px;
+  font-weight: 1em;
+}
+.tree-area li.tree-branch {
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tree-area li.tree-branch::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f07b";
+  color: var(--blue-100);
+  margin-right: 5px;
+  font-size: 1em;
+}
+.tree-area li.tree-branch--active::before {
+  content: "\f07c";
+}
+.tree-area ul.tree-collection {
+  list-style: none;
+  border-left: 2px solid var(--blue-100);
+  padding-left: 15px;
+  margin-left: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  display: none;
+  visibility: hidden;
+}
+.tree-area ul.tree-collection.show {
+  display: block;
+  visibility: visible;
 }
 
 * {
@@ -172,22 +247,15 @@ body {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-areas: "sidebar_one content sidebar_two" "sidebar_one content sidebar_two";
-  height: 100vh;
-  width: 100vw;
-}
-.grid-template-default .sidebar-one {
-  grid-area: sidebar_one;
-}
-.grid-template-default .sidebar-two {
-  grid-area: sidebar_two;
-}
-.grid-template-default .content {
-  grid-area: content;
+  min-height: 100vh;
 }
 
 .sidebar {
   background-color: var(--dark-100);
-  padding: 30px 10px 30px 10px;
+}
+
+.sidebar-one {
+  grid-area: sidebar_one;
 }
 
 .search-area {
@@ -195,6 +263,7 @@ body {
   flex-direction: row;
   width: 95%;
   margin: auto;
+  padding: 30px 10px 0 10px;
 }
 .search-area input {
   outline: none;
@@ -229,6 +298,7 @@ body {
 
 .filter-area {
   margin: 20px auto 0 auto;
+  padding: 0 10px 0 10px;
   width: 95%;
 }
 .filter-area .filter-header {
@@ -286,7 +356,10 @@ body {
 }
 
 .note-cards-area {
-  margin: 20px 10px 20px 10px;
+  margin: 15px 0 0 0;
+  padding: 0px 20px 0px 20px;
+  overflow-y: scroll;
+  max-height: 70vh;
 }
 .note-cards-area .note-card {
   background-color: var(--dark);
@@ -297,6 +370,7 @@ body {
   flex-direction: column;
   position: relative;
   margin: 10px 0 10px 0;
+  cursor: pointer;
 }
 .note-cards-area .note-card .card-header {
   color: var(--light);
@@ -314,6 +388,12 @@ body {
   display: flex;
   position: relative;
 }
+.note-cards-area .note-card:hover {
+  box-shadow: 0 0 2px var(--blue-100);
+}
+.note-cards-area .note-card::before:hover {
+  background-color: red;
+}
 .note-cards-area .menu-collapse {
   visibility: hidden;
   width: 0px;
@@ -328,7 +408,29 @@ body {
   visibility: visible;
 }
 
+.sidebar-two {
+  grid-area: sidebar_two;
+  padding: 80px 0px 0px 0px;
+}
+.sidebar-two .header h3 {
+  font-family: "Poppins";
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--dark-300);
+  margin: 8px;
+}
+
 .content {
-  padding: 150px 20px 20px 20px;
+  grid-area: content;
+  padding: 150px 20px 20px 50px;
   background-color: var(--dark);
+  font-family: "Poppins";
+}
+.content h1 {
+  font-weight: 500;
+  font-size: 3.5em;
+}
+.content p {
+  font-size: 0.95em;
+  max-width: 800px;
 }/*# sourceMappingURL=style.css.map */

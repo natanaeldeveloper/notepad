@@ -39,3 +39,24 @@
         display: none;
     }
 }
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-300);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--dark-100);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--dark-300);
+    border: 1px solid transparent;
+}
