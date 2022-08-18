@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app" class="grid-template-default">
+
+        <!-- Sidebar Left -->
+        <section class="sidebar sidebar-one">
+            <div class="sidebar-content">
+
+                <!-- Form to find notes -->
+                <form id="formSearchNotes">
+
+                    <!-- Search Area -->
+                    <div class="search-area">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <!-- Filter Area -->
+                    <div class="filter-area">
+                            <div class="filter-header">
+                                <i class="fa-solid fa-filter"></i>
+                                &nbsp;Filtro&nbsp;&nbsp;<div class="line"></div>
+                            </div>
+                            <div class="filter-body">
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#Laravel</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#PHP</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#React.js</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#Laravel</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#Node.js</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#React.js</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#PHP</label>
+                                <label class="badge-tag"><input type="checkbox" name="laravel">#Node.js</label>
+                            </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sidebar Right -->
+        <section class="sidebar sidebar-two">
+            <div class="sidebar-content">
+                Sidebar two
+            </div>
+        </section>
+        
+        <!-- Content -->
+        <section class="content">
+            <h1 style="font-size: 40px;">Hello World</h1>
+        </section>
+    </div>
+    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+
+</html>

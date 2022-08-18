@@ -1,0 +1,8 @@
+{
+  "name": "notepad",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Natanael Oliveira",
+  "license": "MIT",
+  "private": true
+}

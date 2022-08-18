@@ -1,0 +1,41 @@
+.line {
+    background-color: var(--dark-300);
+    height: 0.1em;
+    width: 100%;
+}
+
+@mixin badge-tag {
+    padding: 2px 4px 2px 4px;
+    border-radius: 12px;
+    border: 2px solid var(--blue-100);
+    color: var(--blue-100);
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Poppins';
+    user-select: none;
+
+    &:hover {
+        background-color: hsla(222, 100%, 60%, 0.096);
+    }
+
+    input {
+        display: none;
+    }
+}
+
+@mixin badge-tag--active {
+    padding: 2px 4px 2px 4px;
+    border-radius: 12px;
+    border: 2px solid var(--blue-100);
+    background-color: var(--blue-100);
+    color: var(--dark-100);
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Poppins';
+    user-select: none;
+    scale: 0.95;
+
+    input {
+        display: none;
+    }
+}
