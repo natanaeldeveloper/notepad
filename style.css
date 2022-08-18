@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
 .line {
   background-color: var(--dark-300);
-  height: 0.1em;
+  height: 1px;
   width: 100%;
 }
 
@@ -25,44 +25,29 @@
   margin: 0;
   padding: 0;
   border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: var(--grey);
 }
 
 .grid-template-default {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 60% 20%;
-      grid-template-columns: 20% 60% 20%;
-      grid-template-areas: 'sidebar_one content sidebar_two' 'sidebar_one content sidebar_two';
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "sidebar_one content sidebar_two" "sidebar_one content sidebar_two";
   height: 100vh;
   width: 100vw;
 }
-
 .grid-template-default .sidebar-one {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
   grid-area: sidebar_one;
 }
-
 .grid-template-default .sidebar-two {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
   grid-area: sidebar_two;
 }
-
 .grid-template-default .content {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
   grid-area: content;
 }
 
@@ -72,17 +57,11 @@ body {
 }
 
 .search-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 95%;
   margin: auto;
 }
-
 .search-area input {
   outline: none;
   border: 1px solid transparent;
@@ -90,17 +69,14 @@ body {
   border-radius: 5px;
   background-color: var(--dark-200);
   color: var(--light-100);
-  font-family: 'Poppins';
-  font-size: 0.8em;
+  font-family: "Poppins";
+  font-size: 0.9em;
   width: 100%;
 }
-
 .search-area input:focus {
   border: 1px solid var(--blue-100-transparent);
-  -webkit-box-shadow: 0 0 7px var(--blue-100-transparent);
-          box-shadow: 0 0 7px var(--blue-100-transparent);
+  box-shadow: 0 0 7px var(--blue-100-transparent);
 }
-
 .search-area button {
   outline: none;
   border: 1px solid transparent;
@@ -108,46 +84,30 @@ body {
   border-radius: 5px;
   background-color: var(--blue-100);
   color: var(--light);
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 0.8em;
   font-weight: 700;
   margin-left: 5px;
 }
-
 .search-area button:focus {
   border: 1px solid var(--blue-100-transparent);
-  -webkit-box-shadow: 0 0 7px var(--blue-100-transparent);
-          box-shadow: 0 0 7px var(--blue-100-transparent);
+  box-shadow: 0 0 7px var(--blue-100-transparent);
 }
 
 .filter-area {
   margin: 20px auto 0 auto;
   width: 95%;
 }
-
 .filter-area .filter-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   color: var(--dark-300);
   font-weight: 600;
 }
-
 .filter-area .filter-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-top: 10px;
 }
 
@@ -158,18 +118,16 @@ body {
   color: var(--blue-100);
   font-weight: 600;
   font-size: 13px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   margin: 2px;
 }
-
 .badge-tag:hover {
-  background-color: rgba(51, 112, 255, 0.096);
+  background-color: hsla(222deg, 100%, 60%, 0.25);
 }
-
 .badge-tag input {
   display: none;
 }
@@ -179,10 +137,10 @@ body {
   border-radius: 12px;
   border: 2px solid var(--blue-100);
   background-color: var(--blue-100);
-  color: var(--dark-100);
+  color: var(--dark);
   font-weight: 600;
   font-size: 13px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -190,7 +148,6 @@ body {
   scale: 0.95;
   margin: 2px;
 }
-
 .badge-tag--active input {
   display: none;
 }
@@ -199,4 +156,97 @@ body {
   padding: 150px 20px 20px 20px;
   background-color: var(--dark);
 }
-/*# sourceMappingURL=style.css.map */
+
+.note-cards-area {
+  margin: 20px 10px 20px 10px;
+}
+.note-cards-area .note-card {
+  background-color: var(--dark);
+  border-radius: 10px;
+  padding: 15px 12px 12px 12px;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+}
+.note-cards-area .note-card .card-header {
+  color: var(--light);
+}
+.note-cards-area .note-card .card-body {
+  color: var(--grey);
+  font-size: 0.85em;
+  padding-top: 5px;
+}
+.note-cards-area .note-card .card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-menu {
+  outline: none;
+  border: 1px solid var(--blue-100);
+  padding: 7px 11px 7px 11px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--blue-100);
+  font-family: "Poppins";
+  font-size: 0.9em;
+  font-weight: 700;
+  border-radius: 100%;
+  padding: 4px 13px 4px 13px;
+}
+.btn-menu:focus {
+  border: 1px solid var(--blue-100);
+  box-shadow: 0 0 7px var(--blue-100);
+  color: var(--blue-100);
+  position: relative;
+}
+.btn-menu::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f142";
+}
+.btn-menu:focus {
+  border: 1px solid var(--blue-100);
+  box-shadow: 0 0 3px var(--blue-100);
+  background-color: hsla(222deg, 100%, 60%, 0.081);
+  color: var(--blue-100);
+  position: relative;
+}
+
+.btn-favorite {
+  font-size: 20px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--dark);
+  text-shadow: 0 0 4px var(--yellow);
+  margin-right: 5px;
+  outline: none;
+}
+.btn-favorite::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005";
+}
+.btn-favorite:hover {
+  scale: 0.9;
+}
+.btn-favorite:focus {
+  text-shadow: 0 0 10px var(--yellow);
+}
+
+.btn-favorite--active {
+  font-size: 20px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--yellow);
+  margin-right: 5px;
+  outline: none;
+}
+.btn-favorite--active::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005";
+}
+.btn-favorite--active:focus {
+  text-shadow: 0 0 10px var(--yellow);
+}/*# sourceMappingURL=style.css.map */

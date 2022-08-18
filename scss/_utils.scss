@@ -1,6 +1,6 @@
 .line {
     background-color: var(--dark-300);
-    height: 0.1em;
+    height: 1px;
     width: 100%;
 }
 
@@ -15,7 +15,7 @@
     user-select: none;
 
     &:hover {
-        background-color: hsla(222, 100%, 60%, 0.096);
+        background-color: hsla(222, 100%, 60%, 0.25);
     }
 
     input {
@@ -28,7 +28,7 @@
     border-radius: 12px;
     border: 2px solid var(--blue-100);
     background-color: var(--blue-100);
-    color: var(--dark-100);
+    color: var(--dark);
     font-weight: 600;
     font-size: 13px;
     font-family: 'Poppins';
