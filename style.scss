@@ -1,6 +1,6 @@
-@import './scss/form';
-@import './scss/utils';
 @import './scss/fonts';
+@import './scss/utils';
+@import './scss/controls';
 @import './scss/cards';
 
 :root {
@@ -16,7 +16,8 @@
     --blue-100-transparent: hsla(222, 100%, 60%, 0.7);
     --blue-200: #457bfa;
     --red: #cb1919;
-    --yellow: #f9fc69;
+    --yellow-100: #f9fc69;
+    --yellow: #d3d638;
 }
 
 * {
@@ -67,12 +68,12 @@ body {
     margin: auto;
     
     input {
-        @include input-default;
+        @include input;
         width: 100%;
     }
 
     button {
-        @include btn-default;
+        @include btn;
         margin-left: 5px;
     }
 }
@@ -108,85 +109,31 @@ body {
     margin: 2px;
 }
 
-.content {
-    padding: 150px 20px 20px 20px;
-    background-color: var(--dark);
-}
-
 .note-cards-area {
 
     margin: 20px 10px 20px 10px;
 
     .note-card {
-        @include card-default;
-    }
-    
-}
-
-.btn-menu {
-
-    @include btn-transparent-default;
-
-    border-radius: 100%;
-    padding: 4px 13px 4px 13px;
-
-    &::before {
-        font-family: "Font Awesome 5 Free"; 
-        font-weight: 900; 
-        content: "\f142";
+        @include card;
+        margin: 10px 0 10px 0;
     }
 
-    &:focus {
-        border: 1px solid var(--blue-100);
-        box-shadow: 0 0 3px var(--blue-100);
-        background-color: hsla(222, 100%, 60%, 0.081);
-        color: var(--blue-100);
-        position: relative;
+    .menu-collapse {
+        visibility: hidden;
+        width: 0px;
+        padding: 1px;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+        display: flex;
+        flex-direction: row;
     }
-
-}
-
-.btn-favorite {
-
-    font-size: 20px;
-    border: 1px solid transparent;
-    background-color: transparent;
-    color: var(--dark);
-    text-shadow: 0 0 4px var(--yellow);
-    margin-right: 5px;
-    outline: none;
-
-    &::before {
-        font-family: "Font Awesome 5 Free"; 
-        font-weight: 900; 
-        content: "\f005";
-    }
-
-    &:hover {
-        scale: 0.9;
-    }
-
-    &:focus {
-        text-shadow: 0 0 10px var(--yellow);
+    .menu-collapse.show {
+        width: 75px;
+        visibility: visible;
     }
 }
 
-.btn-favorite--active {
-
-    font-size: 20px;
-    border: 1px solid transparent;
-    background-color: transparent;
-    color: var(--yellow);
-    margin-right: 5px;
-    outline: none;
-
-    &::before {
-        font-family: "Font Awesome 5 Free"; 
-        font-weight: 900; 
-        content: "\f005";
-    }
-
-    &:focus {
-        text-shadow: 0 0 10px var(--yellow);
-    }
+.content {
+    padding: 150px 20px 20px 20px;
+    background-color: var(--dark);
 }

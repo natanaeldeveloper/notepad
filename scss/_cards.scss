@@ -1,18 +1,21 @@
 
-@mixin card-default {
+@mixin card {
     background-color: var(--dark);
     border-radius: 10px;
     padding: 15px 12px 12px 12px;
     font-family: 'Poppins';
     display: flex;
     flex-direction: column;
+    position: relative;
 
     .card-header {
         color: var(--light);
+        display: flex;
+        justify-content: space-between;
     }
 
     .card-body {
-        color: var(--grey);
+        color: rgba(128, 128, 128, 0.914);
         font-size: 0.85em;
         padding-top: 5px;
     }
@@ -20,5 +23,7 @@
     .card-footer {
         display: flex;
         justify-content: flex-end;
+        display: flex;
+        position: relative;
     }
 }

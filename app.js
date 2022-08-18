@@ -17,4 +17,16 @@ $(document).ready(function () {
             $(btn).toggleClass('btn-favorite')
         })
     })
+
+    const btnMenuElements = [...$('.menu-control')]
+    
+    btnMenuElements.forEach(btn => {
+        $(btn).click((e) => {
+            let menuId = $(btn).attr('data-target')
+            $(menuId).toggleClass('show')
+            $(btn).toggleClass('btn-menu')
+            $(btn).toggleClass('btn-menu--active')
+        })
+    })
+
 });
