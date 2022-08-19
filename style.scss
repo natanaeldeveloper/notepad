@@ -1,4 +1,5 @@
 @import './scss/variables';
+@import './scss/medias';
 @import './scss/fonts';
 @import './scss/utils';
 @import './scss/cards';
@@ -96,7 +97,6 @@ body {
     .note-card {
         @include card;
         margin: 10px 0 10px 0;
-        cursor: pointer;
     }
 
     .note-card:hover{
@@ -152,5 +152,21 @@ body {
     p {
         font-size: 0.95em;
         max-width: 800px;
+    }
+}
+
+@include media-breakpoint-up(1000px) {
+
+    .grid-template-default {
+        display: grid;
+        grid-template-columns: 30% 20% 30%;
+        grid-template-areas:
+            'sidebar_one content sidebar_two'
+            'sidebar_one content sidebar_two';
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        padding: 0;
     }
 }

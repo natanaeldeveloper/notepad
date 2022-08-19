@@ -50,6 +50,7 @@
   color: var(--dark);
   text-shadow: 0 0 4px var(--yellow);
   margin-right: 3px;
+  cursor: pointer;
 }
 .btn-favorite::before {
   font-family: "Font Awesome 6 Free";
@@ -66,6 +67,7 @@
   background-color: transparent;
   color: var(--yellow);
   margin-right: 3px;
+  cursor: pointer;
 }
 .btn-favorite--active::before {
   font-family: "Font Awesome 6 Free";
@@ -83,6 +85,7 @@
   border: 1px solid var(--dark-300);
   background-color: var(--dark);
   color: var(--grey);
+  cursor: pointer;
 }
 .btn-menu::before {
   display: flex;
@@ -110,6 +113,7 @@
   color: var(--grey);
   box-shadow: 0 0 3px var(--dark-300);
   background-color: var(--dark-100);
+  cursor: pointer;
 }
 .btn-menu--active::before {
   display: flex;
@@ -132,6 +136,7 @@
   border: 1px solid var(--blue-100);
   background-color: var(--dark);
   color: var(--blue-100);
+  cursor: pointer;
 }
 .btn-edit::before {
   display: flex;
@@ -158,6 +163,7 @@
   border: 1px solid var(--red);
   background-color: var(--dark);
   color: var(--red);
+  cursor: pointer;
 }
 .btn-remove::before {
   display: flex;
@@ -203,7 +209,6 @@
 .tree-area li.tree-branch {
   font-size: 1em;
   font-weight: 600;
-  cursor: pointer;
 }
 .tree-area li.tree-branch::before {
   font-family: "Font Awesome 6 Free";
@@ -370,7 +375,6 @@ body {
   flex-direction: column;
   position: relative;
   margin: 10px 0 10px 0;
-  cursor: pointer;
 }
 .note-cards-area .note-card .card-header {
   color: var(--light);
@@ -433,4 +437,16 @@ body {
 .content p {
   font-size: 0.95em;
   max-width: 800px;
+}
+
+@media (max-width: 1000px) {
+  .grid-template-default {
+    display: grid;
+    grid-template-columns: 30% 20% 30%;
+    grid-template-areas: "sidebar_one content sidebar_two" "sidebar_one content sidebar_two";
+    min-height: 100vh;
+  }
+  .sidebar {
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -103,6 +103,7 @@
     color: var(--dark);
     text-shadow: 0 0 4px var(--yellow);
     margin-right: 3px;
+    cursor: pointer;
 
     &::before {
         font-family: "Font Awesome 6 Free"; 
@@ -122,6 +123,7 @@
     background-color: transparent;
     color: var(--yellow);
     margin-right: 3px;
+    cursor: pointer;
 
     &::before {
         font-family: "Font Awesome 6 Free"; 
@@ -136,6 +138,7 @@
     border: 1px solid var(--dark-300);
     background-color: var(--dark);
     color: var(--grey);
+    cursor: pointer;
 
     &:focus {
         box-shadow: 0 0 3px transparent;   
@@ -156,6 +159,7 @@
     color: var(--grey);
     box-shadow: 0 0 3px var(--dark-300);   
     background-color:  var(--dark-100);
+    cursor: pointer;
 
     &::before {
         font-family: "Font Awesome 6 Free"; 
@@ -167,6 +171,7 @@
 .btn-edit {
     @include btn-circle;
     @include btn-primary;
+    cursor: pointer;
 
     &::before {
         font-family: "Font Awesome 6 Free"; 
@@ -178,6 +183,7 @@
 .btn-remove {
     @include btn-circle;
     @include btn-danger;
+    cursor: pointer;
 
     &::before {
         font-family: "Font Awesome 6 Free"; 
@@ -219,7 +225,6 @@
         &.tree-branch {
             font-size: 1em;
             font-weight: 600;
-            cursor: pointer;
         }
 
         &.tree-branch::before {
