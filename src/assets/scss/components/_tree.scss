@@ -1,0 +1,64 @@
+.tree-container {
+
+    .tree {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+        margin-left: 5px;
+        padding-left: 15px;
+        border-left: 1px solid map-get($blue, 100);;
+
+        &.--active {
+            height: auto;
+        }
+    }
+
+    .tree-item, 
+    .tree-branch {
+        @include font-body-1;
+        user-select: none;
+        cursor: pointer;
+        margin-top: 3px;
+        list-style: none;
+
+        &::before {
+            font-family: 'Font Awesome 6 free';
+            font-weight: 900;
+        }
+        
+        &:hover {
+            color: map-get($light, 200);
+        }
+        
+        a {
+            text-decoration: none;
+            color: map-get($light, 200);
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .tree-item {
+        &::before {
+            content: $icon-note;
+            color: map-get($light, 200);
+        }
+    }
+
+    .tree-branch {
+        &::before {
+            content: $icon-folder;
+            color: map-get($blue, 100);
+        }
+
+        &.--active {
+            &::before {
+                content: $icon-folder-open;
+            }
+        }
+    }
+
+    
+}

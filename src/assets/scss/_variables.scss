@@ -1,0 +1,100 @@
+/** Colors ################################# */
+
+$dark: (
+    100: #0F0E0E,
+    200: #1D1D1D,
+    300: #2A2A2A,
+);
+
+$light: (
+    100: #868686,
+    200: #b3b3b3,
+    300: #ffffff,
+);
+
+$yellow: (
+    100: #FFCF5C,
+    200: #FFE29D,
+    300: #FFF8E7,
+);
+
+$orange: (
+    100: #FFA26B,
+    200: #FFC7A6,
+    300: #FFE8DA
+);
+
+$violet: (
+    100: #BE52F2,
+    200: #DBA5F5,
+    300: #EEDFF2
+);
+
+$blue: (
+    100: #3471ff,
+    200: #5cb2fd,
+    300: #D5E9FA,
+);
+
+$green: (
+    100: #00C48C,
+    200: #7DDFC3,
+    300: #D5F2EA
+);
+
+$red: (
+    100: #FF647C,
+    200: #FDAFBB,
+    300: #FBE4E8,
+);
+
+$black: #000000;
+$white: #fff;
+
+$colors-name: 
+    'primary', 
+    'secondary', 
+    'success', 
+    'warning', 
+    'danger',
+    'default',
+    'light';
+
+$colors: (
+    primary: map-get($blue, 100),
+    secondary: map-get($dark, 200),
+    success: map-get($green, 100),
+    warning: map-get($yellow, 100),
+    danger: map-get($red, 100),
+    default: map-get($dark, 300),
+    light: map-get($light, 300),
+);
+
+$colors-contrast: (
+    primary: $white,
+    secondary: $white,
+    success: $white,
+    warning: $white,
+    danger: $white,
+    default: $white,
+    light: $black,
+);
+
+/** Medias ############################### */
+
+$xs: 480px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+/** Icons ############################### */
+
+$icon-menu: '\f0c9';
+$icon-edit: '\f305';
+$icon-remove: '\f2ed';
+$icon-favorite: '\f005';
+$icon-folder: '\f07b';
+$icon-folder-open: '\f07c';
+$icon-note: '\f249';
+$icon-clip: '\f0c6';

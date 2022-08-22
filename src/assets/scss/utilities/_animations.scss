@@ -1,0 +1,12 @@
+@mixin animationButton($color, $name) {
+    @keyframes pressed-button-#{$name} {
+        from {
+            filter: brightness(1);
+            box-shadow: 0 0 0 0px rgba($color, 0.5);
+        } 
+        to {
+            filter: brightness(0.89);
+            box-shadow: 0 0 0 3px rgba($color, 0.5);
+        }
+    }
+}

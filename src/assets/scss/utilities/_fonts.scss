@@ -1,0 +1,132 @@
+/** 
+100	Thin (Hairline)
+200	Extra Light (Ultra Light)
+300	Light
+400	Normal (Regular)
+500	Medium
+600	Semi Bold (Demi Bold)
+700	Bold
+800	Extra Bold (Ultra Bold)
+900	Black (Heavy)
+950	Extra <Black> (Ultra <Black>)
+*/
+
+/* Fontawesome 6 Free */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+
+/**  SF Pro Display SB */
+@font-face {
+    font-family: 'San_Francisco';
+    src: url('../fonts/San_Francisco/SF-Pro-Display-Semibold.otf');
+    font-stretch: condensed;
+    font-weight: 600;
+}
+
+/** SF Pro Text SB */
+@font-face {
+    font-family: 'San_Francisco';
+    src: url('../fonts/San_Francisco/SF-Pro-Text-Semibold.otf');
+    font-stretch: normal;
+    font-weight: 600;
+}
+
+/** SF Pro Text M */
+@font-face {
+    font-family: 'San_Francisco';
+    src: url('../fonts/San_Francisco/SF-Pro-Text-Medium.otf');
+    font-stretch: normal;
+    font-weight: 500;
+}
+
+/** SF Pro Text R */
+@font-face {
+    font-family: 'San_Francisco';
+    src: url('../fonts/San_Francisco/SF-Pro-Text-Regular.otf');
+    font-stretch: normal;
+    font-weight: 400;
+}
+
+/** heading */
+
+@mixin font-heading-1 {
+    font-family: 'San_Francisco';
+    font-weight: 600;
+    font-stretch: condensed;
+    font-size: 34px;
+}
+
+@mixin font-heading-2 {
+    font-family: 'San_Francisco';
+    font-weight: 600;
+    font-stretch: condensed;
+    font-size: 22px;
+}
+
+@mixin font-heading-3 {
+    font-family: 'San_Francisco';
+    font-weight: 600;
+    font-stretch: normal;
+    font-size: 17px;
+}
+
+@mixin font-heading-4 {
+    font-family: 'San_Francisco';
+    font-weight: 500;
+    font-stretch: normal;
+    font-size: 15px;
+}
+
+/** button */
+
+@mixin font-button-1 {
+    font-family: 'San_Francisco';
+    font-weight: 600;
+    font-stretch: normal;
+    font-size: 17px;
+}
+
+@mixin font-button-2 {
+    font-family: 'San_Francisco';
+    font-weight: 500;
+    font-stretch: normal;
+    font-size: 12px;
+}
+
+/** caption */
+
+@mixin font-caption-1 {
+    font-family: 'San_Francisco';
+    font-weight: 500;
+    font-stretch: normal;
+    font-size: 12px;
+}
+
+@mixin font-caption-2 {
+    font-family: 'San_Francisco';
+    font-weight: 500;
+    font-stretch: normal;
+    font-size: 11px;
+}
+
+/** body */
+
+@mixin font-body-1 {
+    font-family: 'San_Francisco';
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 15px;
+}
+
+@mixin font-body-2 {
+    font-family: 'San_Francisco';
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 13px;
+}
+
+@mixin font-body-3 {
+    font-family: 'San_Francisco';
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 11px;
+}

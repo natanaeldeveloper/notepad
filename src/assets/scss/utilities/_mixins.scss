@@ -1,0 +1,14 @@
+@mixin media-breakpoint($min-width: 0px, $max-width: 100000px) {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin limit-text($linesCount) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $linesCount;
+    line-clamp: $linesCount;
+    -webkit-box-orient: vertical;
+}

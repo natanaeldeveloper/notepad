@@ -1,0 +1,106 @@
+/** Utilities */
+@import 'variables';
+@import 'utilities/reset';
+@import 'utilities/functions';
+@import 'utilities/mixins';
+@import 'utilities/fonts';
+@import 'utilities/animations';
+
+/** Components */
+@import 'components/borders';
+@import 'components/buttons';
+@import 'components/labels';
+@import 'components/controls';
+@import 'components/badges';
+@import 'components/cards';
+@import 'components/tree';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $black;
+    color: $white;
+    font-family: 'San_Francisco', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    
+    @include media-breakpoint(0, $lg) {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    @include media-breakpoint($lg) {
+        grid-template-areas: 'aside-one content aside-two'; 
+        grid-template-columns: 25% 55% 20%;
+    }
+
+    .grid-aside-one {
+        grid-area: aside-one;
+        background-color: map-get($colors, 'secondary');
+    }
+    
+    .grid-content {
+        grid-area: content;
+    }
+    
+    .grid-aside-two {
+        grid-area: aside-two;
+        background-color: map-get($colors, 'secondary');
+    }
+}
+
+.card-note {
+
+    background-color: map-get($dark, 100);
+    padding: 10px;
+    min-width: 250px;
+    max-width: 350px;
+    border: 1px solid transparent;
+    transition: all 0.1s;
+
+    &:hover {
+        border: 1px solid rgba(map-get($light, 100), 0.2);
+    }
+
+    .card-header {
+        .card-title {
+            @include limit-text(1);
+            color: map-get($light, 300);
+        }
+    }
+
+    .card-body {
+        .card-text {
+            @include limit-text(4);
+            color: map-get($light, 200);
+            margin: 0 5px 0 0;
+        }
+    }
+
+    .card-footer {
+        .menu-content {
+            width: 0;
+            padding: 4px 0 4px 4px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: row;
+            visibility: hidden;
+
+            * {
+                margin-right: 4px;
+            }
+
+            &.--active {
+                width: 74px;
+                visibility: visible;
+            }
+        }
+    }
+}
