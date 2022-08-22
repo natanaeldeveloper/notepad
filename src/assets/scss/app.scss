@@ -10,7 +10,7 @@
 @import 'components/borders';
 @import 'components/buttons';
 @import 'components/labels';
-@import 'components/controls';
+@import 'components/inputs';
 @import 'components/badges';
 @import 'components/cards';
 @import 'components/tree';
@@ -37,7 +37,7 @@ body {
     
     @include media-breakpoint($lg) {
         grid-template-areas: 'aside-one content aside-two'; 
-        grid-template-columns: 25% 55% 20%;
+        grid-template-columns: 20% 60% 20%;
     }
 
     .grid-aside-one {
@@ -55,14 +55,84 @@ body {
     }
 }
 
+.search-notes-area {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 30px 10px 0 10px;
+
+    input {
+        width: 100%;
+        margin-right: 7px;
+    }
+
+    .btn-search {
+
+        padding: 10px 15px 10px 15px;
+        font-size: 14px;
+
+        &::before {
+            font-family: 'Font Awesome 6 Free';
+            content: $icon-search;
+            font-weight: 900;
+        }
+    }
+}
+
+.filter-notes-area {
+
+    .filter-notes-header {
+        
+        @include font-body-1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 20px 15px 0 15px;
+        color: map-get($light, 100);
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: map-get($light, 100);
+        }
+
+        span {
+            margin-right: 7px;
+            white-space: nowrap;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .filter-notes-body {
+        padding: 15px 15px 0 15px;
+        display: flex;
+        flex-flow: row wrap;
+
+        label {
+            margin: 0 3px 4px 0;
+        }
+    }
+}
+
+.card-note-container {
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 20px 0px 0 0px;
+    padding: 0 10px 0 10px;
+    height: 70vh;
+}
+
 .card-note {
 
     background-color: map-get($dark, 100);
     padding: 10px;
-    min-width: 250px;
-    max-width: 350px;
     border: 1px solid transparent;
     transition: all 0.1s;
+    margin: 0 0 7px 0;
 
     &:hover {
         border: 1px solid rgba(map-get($light, 100), 0.2);
@@ -104,3 +174,4 @@ body {
         }
     }
 }
+

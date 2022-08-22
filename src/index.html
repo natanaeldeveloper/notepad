@@ -1,25 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Notepad</title>
 </head>
+
 <body>
     <div id="app" class="grid-container">
         <aside class="grid-aside-one">
-            aside one
+            <form id="formSearchNote">
+                <div class="search-notes-area">
+                    <input type="text" class="form-input-lg form-input-primary" placeholder="Search">
+                    <button class="btn-lg btn-primary btn-search"></button>
+                </div>
+                <div class="filter-notes-area">
+                    <div class="filter-notes-header">
+                        <span><i class="fa-solid fa-filter"></i></span>
+                        <span>Filtro de Busca</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="filter-notes-body">
+                        <label class="label-primary --active" data-toggle="toggle">#Laravel<input
+                                type="checkbox"></label>
+                        <label class="label-primary --active" data-toggle="toggle">#React.js<input
+                                type="checkbox"></label>
+                        <label class="label-primary" data-toggle="toggle">#Node.js<input type="checkbox"></label>
+                        <label class="label-primary --active" data-toggle="toggle">#Flutter<input
+                                type="checkbox"></label>
+                        <label class="label-primary" data-toggle="toggle">#Lembretes<input type="checkbox"></label>
+                        <label class="label-primary --active" data-toggle="toggle">#Atividades<input
+                                type="checkbox"></label>
+                        <label class="label-primary" data-toggle="toggle">#checklist<input type="checkbox"></label>
+                    </div>
+                </div>
+            </form>
+            <div class="card-note-container">
+
+                <div class="card card-note">
+                    <div class="card-header">
+                        <h4 class="card-title">What is Lorem Ipsum?</h4>
+                        <button class="btn-favorite" data-toggle="toggle"></button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Lorem dd is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy tex oij io em dd is simply ply dummy text
+                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            tex oij io em dd is simply dummy text of the printing and typesetting industry</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="menu-content card-note-01">
+                            <button class="btn-outline-danger btn-remove"></button>
+                            <button class="btn-outline-primary btn-edit"></button>
+                        </div>
+                        <button class="btn-outline-light btn-menu" data-toggle="toggle"
+                            data-target=".card-note-01"></button>
+                    </div>
+                </div>
+
+                <div class="card card-note">
+                    <div class="card-header">
+                        <h4 class="card-title">What is Lorem Ipsum?</h4>
+                        <button class="btn-favorite" data-toggle="toggle"></button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Lorem dd is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy tex oij io em dd is simply ply dummy text
+                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            tex oij io em dd is simply dummy text of the printing and typesetting industry</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="menu-content card-note-02">
+                            <button class="btn-outline-danger btn-remove"></button>
+                            <button class="btn-outline-primary btn-edit"></button>
+                        </div>
+                        <button class="btn-outline-light btn-menu" data-toggle="toggle"
+                            data-target=".card-note-02"></button>
+                    </div>
+                </div>
+    
+                <div class="card card-note">
+                    <div class="card-header">
+                        <h4 class="card-title">What is Lorem Ipsum?</h4>
+                        <button class="btn-favorite" data-toggle="toggle"></button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Lorem dd is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy tex oij io em dd is simply ply dummy text
+                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            tex oij io em dd is simply dummy text of the printing and typesetting industry</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="menu-content card-note-03">
+                            <button class="btn-outline-danger btn-remove"></button>
+                            <button class="btn-outline-primary btn-edit"></button>
+                        </div>
+                        <button class="btn-outline-light btn-menu" data-toggle="toggle"
+                            data-target=".card-note-03"></button>
+                    </div>
+                </div>
+
+                <div class="card card-note">
+                    <div class="card-header">
+                        <h4 class="card-title">What is Lorem Ipsum?</h4>
+                        <button class="btn-favorite" data-toggle="toggle"></button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Lorem dd is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy tex oij io em dd is simply ply dummy text
+                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            tex oij io em dd is simply dummy text of the printing and typesetting industry</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="menu-content card-note-04">
+                            <button class="btn-outline-danger btn-remove"></button>
+                            <button class="btn-outline-primary btn-edit"></button>
+                        </div>
+                        <button class="btn-outline-light btn-menu" data-toggle="toggle"
+                            data-target=".card-note-04"></button>
+                    </div>
+                </div>
+
+                <div class="card card-note">
+                    <div class="card-header">
+                        <h4 class="card-title">What is Lorem Ipsum?</h4>
+                        <button class="btn-favorite" data-toggle="toggle"></button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Lorem dd is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy tex oij io em dd is simply ply dummy text
+                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            tex oij io em dd is simply dummy text of the printing and typesetting industry</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="menu-content card-note-05">
+                            <button class="btn-outline-danger btn-remove"></button>
+                            <button class="btn-outline-primary btn-edit"></button>
+                        </div>
+                        <button class="btn-outline-light btn-menu" data-toggle="toggle"
+                            data-target=".card-note-05"></button>
+                    </div>
+                </div>
+
+            </div>
         </aside>
         <main class="grid-content">
             content
         </main>
         <aside class="grid-aside-two">
-            aside two
+            <br><br>
+            <nav class="tree-container">
+                <ul class="tree --active" style="border: 0;">
+                    <li class="tree-item"> Item 01</li>
+                    <li class="tree-item"> Item 02</li>
+                    <li class="tree-branch target-tree-01" data-toggle="toggle" data-target=".target-tree-01"> Item 01</li>
+                    <ul class="tree target-tree-01">
+                        <li class="tree-item"> Sub-item 01</li>
+                        <li class="tree-item"> Sub-item 02</li>
+                        <li class="tree-item"> Sub-item 03</li>
+                        <li class="tree-branch target-tree-02" data-toggle="toggle" data-target=".target-tree-02"><a href="#"> Item 01</a></li>
+                        <ul class="tree target-tree-02">
+                            <li class="tree-item"> <a href="#">Sub-item 01</a></li>
+                            <li class="tree-item"> <a href="#">Sub-item 01</a></li>
+                            <li class="tree-item"> <a href="#">Sub-item 01</a></li>
+                        </ul>
+                    </ul>
+                    <li class="tree-item"> Item 04</li>
+                    <li class="tree-item"> Item 05</li>
+
+                </ul>
+            </nav>
         </aside>
     </div>
 
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -3,8 +3,8 @@
         
         @include font-button-2;
         border: 1px solid map-get($colors, $color);
-        background-color: map-get($colors, $color);
-        color: map-get($colors-contrast, $color);
+        background-color: transparent;
+        color: map-get($colors, $color);
         user-select: none;
         cursor: pointer;
         padding: 4px 7px 4px 7px;
@@ -18,7 +18,7 @@
 
     .label-#{$color}.--active {
         border: 1px solid map-get($colors, $color);
-        background-color: transparent;
-        color: map-get($colors, $color);
+        background-color: map-get($colors, $color);
+        color: map-get($colors-contrast, $color);
     }
 }

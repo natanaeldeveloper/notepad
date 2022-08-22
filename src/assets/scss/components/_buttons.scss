@@ -24,14 +24,14 @@
 
 .btn {
     padding: 7px;
-    border-radius: 3px;
+    border-radius: 5px;
     @include font-button-2;
     cursor: pointer;
 }
 
 .btn-lg {
-    padding: 7px;
-    border-radius: 3px;
+    padding: 10px;
+    border-radius: 5px;
     @include font-button-1;
     cursor: pointer;
 }
