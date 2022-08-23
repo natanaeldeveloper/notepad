@@ -13,8 +13,8 @@
         <aside class="grid-aside-one">
             <form id="formSearchNote">
                 <div class="search-notes-area">
-                    <input type="text" class="form-input-lg form-input-primary" placeholder="Search">
-                    <button class="btn-lg btn-primary btn-search"></button>
+                    <input type="text" class="form-input-lg form-input-primary" placeholder="Search" name="search">
+                    <button type="submit" class="btn-lg btn-primary btn-search"></button>
                 </div>
                 <div class="filter-notes-area">
                     <div class="filter-notes-header">
@@ -23,17 +23,13 @@
                         <span class="line"></span>
                     </div>
                     <div class="filter-notes-body">
-                        <label class="label-primary --active" data-toggle="toggle">#Laravel<input
-                                type="checkbox"></label>
-                        <label class="label-primary --active" data-toggle="toggle">#React.js<input
-                                type="checkbox"></label>
-                        <label class="label-primary" data-toggle="toggle">#Node.js<input type="checkbox"></label>
-                        <label class="label-primary --active" data-toggle="toggle">#Flutter<input
-                                type="checkbox"></label>
-                        <label class="label-primary" data-toggle="toggle">#Lembretes<input type="checkbox"></label>
-                        <label class="label-primary --active" data-toggle="toggle">#Atividades<input
-                                type="checkbox"></label>
-                        <label class="label-primary" data-toggle="toggle">#checklist<input type="checkbox"></label>
+                        <label class="label-primary" data-toggle="toggle">#Laravel<input type="checkbox" name="laravel"></label>
+                        <label class="label-primary" data-toggle="toggle">#React.js<input ype="checkbox"></label>
+                        <label class="label-primary" data-toggle="toggle">#Node.js<input type="checkbox" name="nodejs"></label>
+                        <label class="label-primary" data-toggle="toggle">#Flutter<input type="checkbox" name="flutter"></label>
+                        <label class="label-primary" data-toggle="toggle">#Lembretes<input type="checkbox" name="lembretes"></label>
+                        <label class="label-primary" data-toggle="toggle">#Atividades<input type="checkbox" name="atividades"></label>
+                        <label class="label-primary" data-toggle="toggle">#checklist<input type="checkbox" name="checklist"></label>
                     </div>
                 </div>
             </form>
@@ -150,7 +146,12 @@
             content
         </main>
         <aside class="grid-aside-two">
-            <br><br>
+            <div class="categories-area">
+                <div class="categories-header">
+                    <span>Categorias</span>
+                    <span class="line"></span>
+                </div>
+            </div>
             <nav class="tree-container">
                 <ul class="tree --active" style="border: 0;">
                     <li class="tree-item"> Item 01</li>
