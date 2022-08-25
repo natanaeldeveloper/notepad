@@ -200,3 +200,57 @@ body {
         }
     }
 }
+
+.grid-content {
+    padding: 100px 0 0 50px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.content-header {
+    h1 {
+        @include font-heading-1;
+        font-size: 45px;
+    }
+
+    .content-description {
+        @include font-heading-4;
+        color: map-get($light, 200);
+        margin-top: 10px;
+    }
+
+    .content-info {
+        display: flex;
+        flex-direction: row;
+        @include font-heading-4;
+        color: map-get($light, 200);
+        
+        .info-category::before{
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            content: $icon-folder;
+            color: map-get($blue, 100);
+        }
+
+        .info-updated-at::before{
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            content: $icon-time;
+            color: map-get($blue, 100);
+        }
+    }
+}
+
+.content-body {
+    
+    #content {
+        @include font-heading-3;
+        width: 480px;
+        min-height: 240px; /*altura minima*/
+        overflow: hidden;
+        resize: none; /* pode trocar por resize: vertical; se quiser permitir redimensionar manualmente na vertical*/
+        padding: 0 50px 0 0;
+        background-color: transparent;
+        color: map-get($light, 300);
+    }
+}
