@@ -2,7 +2,12 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -43,8 +48,40 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
+
         $this->reportable(function (Throwable $e) {
             //
+        });
+
+        if(config('app.env') == 'production') {
+            $this->renderableProduction();
+        }
+    }
+
+    public function renderableProduction()
+    {
+        $this->renderable(function (QueryException $e, $request) {
+
+            return response()->json([
+                'title'     => 'Server connection error.',
+                'status'    => 500
+            ], 500);
+        });
+
+        $this->renderable(function (NotFoundHttpException $e, $request) {
+
+            return response()->json([
+                'title'     => 'Resource not found.',
+                'status'    => 404
+            ], 404);
+        });
+
+        $this->renderable(function (HttpException $e, $request) {
+
+            return response()->json([
+                'title'     => $e->getMessage(),
+                'status'    => $e->getStatusCode(),
+            ], $e->getStatusCode());
         });
     }
 }
